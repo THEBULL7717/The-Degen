@@ -1,0 +1,41 @@
+Let's step into how programs actually interact with people and how they handle errors. This is the difference between a static script and a real "app."
+7. User Input (Interactivity)
+A program isn't very useful if it can't listen to you. We use input() to grab text from the keyboard.
+user_name = input("What is your name? ")
+print("Hello, " + user_name + "! Nice to meet you.")
+
+8. Handling Numbers (Integers vs. Strings)
+Computers see "10" (text) and 10 (a number) differently. If you want to do math with a user's input, you have to convert it.
+birth_year = input("What year were you born? ")
+# Convert text to a number (integer) to do math
+age = 2026 - int(birth_year) 
+
+print("You are approximately " + str(age) + " years old.")
+
+9. Dictionaries (Key-Value Pairs)
+If a List is a simple row of items, a Dictionary is like a real-life dictionary or a contact card. It maps a "Key" to a "Value."
+phone_book = {
+    "Alice": "555-0101",
+    "Bob": "555-0202"
+}
+
+print(phone_book["Alice"]) # Outputs: 555-0101
+
+How Data Moves Through a Program
+When you write more complex code, data usually flows in a specific cycle: Input → Validation → Logic → Output.
+10. Error Handling (Try/Except)
+Professional code assumes things will go wrong. If you ask a user for a number and they type "Banana," the program will crash—unless you "catch" the error.
+try:
+    number = int(input("Enter a number to double: "))
+    print(number * 2)
+except ValueError:
+    print("That's not a number! Please try again.")
+
+Comparison of Data Structures
+| Structure | Format | Best Used For... |
+|---|---|---|
+| String | "Hello" | Single pieces of text |
+| Integer | 42 | Whole numbers for math |
+| List | [1, 2, 3] | Ordered collections of items |
+| Dictionary | {"ID": 1} | Grouping related data (like a profile) |
+Would you like to combine everything we've learned into a "Mini To-Do List" program that can add and show tasks?
