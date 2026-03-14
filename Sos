@@ -1,0 +1,5 @@
+try:
+    number = int(input("Enter a number to double: "))
+    print(number * 2)
+except ValueError:
+    print("That's not a number! Please try again.")
